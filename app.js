@@ -1,7 +1,7 @@
 /**
  * Main application file.
  * BeanBlog Source Code V1.0.0
- * Created By Dawid Keyser
+ * Created By Dawid Keyser and Lesley Lai
  */
 
 // Setup Express server
