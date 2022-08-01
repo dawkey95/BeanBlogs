@@ -11,15 +11,16 @@ const port = 5000;
 
 // Setup Handlebars
 const handlebars = require("express-handlebars");
-app.engine("handlebars", handlebars({
-    defaultLayout: "main"
+app.engine('handlebars', handlebars.engine({ 
+    defaultLayout: 'main' 
 }));
-app.set("view engine", "handlebars");
+
+app.set('view engine', 'handlebars');
 
 
 // Handle index routing by rendering home page
 app.get("/", function (req, res) {
-    res.send("home");
+    res.render("home");
 });
 
 // Start the server running.
