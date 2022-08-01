@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        {{#if title}}
+        <title id="page-title">{{title}}</title>
+        {{else}}
+        <title>BeanBlog</title>
+        {{/if}}
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/site.css">
+        <link rel="stylesheet" type="text/css" href="./css/utils.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/utils.css">
+        <link rel="shortcut icon" href="./images/emojipng.com-13325754.ico"
+            type="image/x-icon">
+
+        <script src="./client.js"></script>
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="../../public/check_username.js"></script>
+    </head>
+    <header class="pageHeader">
+        <h1><a href="/" id="logoText">beanThereLattely</a></h1>
+
+        {{#if currentBeaner}}
+        <h2 id="user">{{user}} Signed-In</h2>
+        {{else}}
+        <h2 id="user"Guest Beaner</h2>
+        {{/if}}
+        
+        <input type="checkbox" id="menuBtn">
+        <label id="burger" for="menuBtn">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <nav id="menu">
+            <ul class="menu">
+                <li><a class="menuItem" href="/articles">Articles</a></li>
+                <li><a class="menuItem" href="/profilePage">Profile</a></li>
+                <li><a class="menuItem" href="/beanBoard">theBeanBoard</a></li>
+                <li><a class="menuItem" href="/logout">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        {{{body}}}
+    </body>
+
+</html>
